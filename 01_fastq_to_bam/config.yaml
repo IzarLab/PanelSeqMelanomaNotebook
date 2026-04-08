@@ -1,0 +1,25 @@
+input_dir: "/mnt/myvolume/panel_seq/reset_analysis_sample/test"
+output_dir: "/mnt/myvolume/panel_seq/reset_analysis_sample/test"
+
+# Samples are folder names under input_dir
+samples:
+  - QHPRG001B4
+  - QHPRG002BC
+
+reference:
+  fasta: "/home/ubuntu/reference/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.fna"
+  fai:   "/home/ubuntu/reference/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.fna.fai"
+  dict:  "/home/ubuntu/reference/GCA_000001405.15_GRCh38_no_alt_plus_hs38d1_analysis_set.dict"
+  # bwa uses the same base path and finds .amb/.ann/.bwt/.pac/.sa automatically
+
+# Targets (WES/panel) — set your BED here
+targets:
+  bed: "/home/ubuntu/panel_bed/Temp_1_Covered.bed"   # <-- put your capture BED path
+  pad: 100                                    # optional padding
+
+# Tools (only if your Snakefile uses them)
+tools:
+  gatk: "gatk"
+  bwa: "bwa"
+  samtools: "samtools"
+  picard: "picard"
