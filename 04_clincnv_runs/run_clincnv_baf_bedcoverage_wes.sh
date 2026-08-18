@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# ClinCNV run script retained in its original working form.
+
 BASE="/mnt/myvolume/panel_seq/new_bed_analysis"
 RUN_ROOT="${BASE}/new_clincnv_runs/full_wes_s200_l9_f2_baf_bedcoverage_wes"
 SCRIPT="/mnt/myvolume/panel_seq/reset_analysis_sample/test_2/ClinCNV/clinCNV.R"
